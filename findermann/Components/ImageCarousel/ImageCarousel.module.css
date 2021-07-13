@@ -1,0 +1,7 @@
+.imageCarousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40rem;
+  height: 60rem;
+}
