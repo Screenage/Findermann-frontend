@@ -1,6 +1,24 @@
 .icon {
   margin-left: 0.7rem;
 }
+.items_nav {
+  box-shadow: 0px 3px 6px #00000029;
+}
+.filters {
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; */
+  padding: 0.5rem;
+  width: 100%;
+  font-size: 0.8rem;
+}
+.type {
+  padding: 0.5rem 0 0 0;
+}
+.category > p {
+  padding: 0 0 1rem 0.5rem;
+}
 /* <!-- start of other_popular_categories --> */
 
 .other_popular_categories h3 {
@@ -50,7 +68,7 @@
 
 @media screen and (min-width: 1000px) {
   .content {
-    padding: 0 2.5vw;
+    padding: 3.5rem 2.5vw;
   }
 }
 
@@ -59,7 +77,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding: 1rem 5vw;
+    padding: 3.5rem 5vw;
   }
   .container {
     display: grid;
@@ -72,6 +90,7 @@
   }
   .items_nav {
     grid-area: items_nav;
+    box-shadow: 0px 3px 6px #00000029;
   }
   .main_content {
     grid-area: main_content;
@@ -80,6 +99,6 @@
 
 @media screen and (min-width: 1420px) {
   .content {
-    padding: 1rem 10vw;
+    padding: 3.5rem 10vw;
   }
 }

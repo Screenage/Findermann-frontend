@@ -1,51 +1,62 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/swiper.scss";
+import React, { useState } from "react";
+import styles from "./ImageCarousel.module.css";
 import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faChevronRight,
+  faChevronLeft,
+  faCamera,
+} from "@fortawesome/free-solid-svg-icons";
 
-// install Swiper modules
-SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
+function ImageCarousel({ slides }) {
+  const [current, setCurrent] = useState(0);
+  const length = slides.length;
 
-function ImageCarousel() {
+  const nextSlide = () => {
+    setCurrent(current === length - 1 ? 0 : current + 1);
+  };
+
+  const prevSlide = () => {
+    setCurrent(current === 0 ? length - 1 : current - 1);
+  };
+
+  if (!Array.isArray(slides) || slides.length <= 0) {
+    return null;
+  }
+
   return (
-    <>
-      <div className={styles.imageCarousel}>
-        <Swiper
-          spaceBetween={50}
-          slidesPerView={3}
-          navigation
-          pagination={{ clickable: true }}
-          scrollbar={{ draggable: true }}
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
-        >
-          {/* {data.map((pic, index ) =>{
-
-<SwiperSlide key={data.index}>
-    
-  <img src={data.img} alt="img" />
-    
-    
-    </SwiperSlide>
-
-        })} */}
-          <SwiperSlide>
-            {" "}
-            <img src="/assets/app-store-google-play-logo.png" alt="img" />
-          </SwiperSlide>
-          <SwiperSlide>
-            {" "}
-            <img src="/assets/app-store-google-play-logo.png" alt="img" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="/assets/app-store-google-play-logo.png" alt="img" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="/assets/app-store-google-play-logo.png" alt="img" />
-          </SwiperSlide>
-          ...
-        </Swiper>
+    <section className={styles.slider}>
+      <div className={styles.icon_left} onClick={prevSlide}>
+        {" "}
+        <FontAwesomeIcon icon={faChevronLeft} className={styles.icon} />
       </div>
-    </>
+      <div className={styles.icon_right} onClick={nextSlide}>
+        <FontAwesomeIcon icon={faChevronRight} className={styles.icon} />
+      </div>
+      <div className={styles.pictureTotal}>
+        <FontAwesomeIcon icon={faCamera} className={styles.icon} />
+
+        <p> {length} </p>
+      </div>
+      {slides.map((slide, index) => {
+        return (
+          <div
+            className={`${styles.slide} ${
+              index === current ? styles.active : null
+            }`}
+            key={index}
+          >
+            {index === current && (
+              <img
+                src={slide.image}
+                alt="travel image"
+                className={styles.image}
+              />
+            )}
+          </div>
+        );
+      })}
+    </section>
   );
 }
 

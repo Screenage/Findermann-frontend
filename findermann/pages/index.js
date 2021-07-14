@@ -78,11 +78,11 @@ export default function Home() {
 
           {/* this where the main content will be located */}
           <main className={styles.main_content}>
-            <div className={styles.items_container}>
-              <div className={styles.items_header}>
+            <div className="items_container">
+              <div className="items_header">
                 <h2>Popular in Fashion</h2>
                 <Link href="/login">
-                  <div className={styles.items_header_link}>
+                  <div className="items_header_link">
                     <p> View more </p>{" "}
                     <FontAwesomeIcon
                       className={styles.icon}
@@ -92,7 +92,7 @@ export default function Home() {
                 </Link>
               </div>
               {/* start of items_grid */}
-              <div className={styles.items_grid}>
+              <div className="items_grid">
                 <CategoryItem
                   imageSrc="https://res.cloudinary.com/dozs7fkuv/image/upload/v1615858412/images/fa5cjxllphzzky34gnwo.jpg"
                   itemSection="Missing"
@@ -182,17 +182,17 @@ export default function Home() {
 
             {/* start of another items_container */}
 
-            <div className={styles.items_container}>
-              <div className={styles.items_header}>
+            <div className="items_container">
+              <div className="items_header">
                 <h2 style={{ color: "red" }}>Popular in Person</h2>
                 <Link href="/login">
-                  <div className={styles.items_header_link}>
+                  <div className="items_header_link">
                     <p> View more </p> <FontAwesomeIcon icon={faChevronRight} />
                   </div>
                 </Link>
               </div>
               {/* start of items_grid */}
-              <div className={styles.items_grid}>
+              <div className="items_grid">
                 <CategoryItem
                   imageSrc="https://res.cloudinary.com/dozs7fkuv/image/upload/v1615858412/images/fa5cjxllphzzky34gnwo.jpg"
                   itemSection="Missing"
@@ -279,7 +279,7 @@ export default function Home() {
 
             {/* Start of Other Popular Categories */}
 
-            <div className={styles.other_popular_categories}>
+            <div className="other_popular_categories">
               <h3>Other popular categories</h3>
               <div className={styles.popular_categories_grid}>
                 <div className={styles.popular_categories_item}>
@@ -303,11 +303,11 @@ export default function Home() {
 
             {/* just give them id if u want to differentiate them */}
 
-            <div className={styles.items_container}>
-              <div className={styles.items_header}>
+            <div className="items_container">
+              <div className="items_header">
                 <h2 style={{ color: "#FF1302" }}>Popular in Electronics</h2>
                 <Link href="/login">
-                  <div className={styles.items_header_link}>
+                  <div className="items_header_link">
                     <p> View more </p> <FontAwesomeIcon icon={faChevronRight} />
                   </div>
                 </Link>
@@ -315,7 +315,7 @@ export default function Home() {
 
               {/* start of items_grid */}
 
-              <div className={styles.items_grid}>
+              <div className="items_grid">
                 <CategoryItem
                   imageSrc="https://res.cloudinary.com/dozs7fkuv/image/upload/v1615858412/images/fa5cjxllphzzky34gnwo.jpg"
                   itemSection="Missing"
