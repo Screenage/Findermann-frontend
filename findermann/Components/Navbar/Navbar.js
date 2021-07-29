@@ -1,4 +1,4 @@
-import styles from "../styles/Navbar.module.css";
+import styles from "./Navbar.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import { faBars } from "@fortawesome/free-solid-svg-icons";

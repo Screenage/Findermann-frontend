@@ -1,7 +1,8 @@
+import React, { useEffect } from "react";
+import Axios from "axios";
 import Head from "next/head";
-import Image from "next/image";
 import Link from "next/link";
-import styles from "../styles/Home.module.css";
+import styles from "../styles/home.module.css";
 import Category from "../Components/Categories/CategoryPanel/CategoryPanel";
 import CategoryItem from "../Components/Categories/CategoryItem/CategoryItem";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -13,6 +14,10 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
+  useEffect(() => {
+    console.log(itemSection);
+  }, []);
+
   return (
     <>
       {/* <!-- start of container --> */}

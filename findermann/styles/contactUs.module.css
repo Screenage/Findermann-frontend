@@ -1,24 +1,53 @@
 .container {
   padding: 1rem 0rem;
 }
-
+.user_nav_pane {
+  background-color: var(--thick-blue);
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 15px;
+  padding: 2rem 0;
+}
 .post_person_box {
   box-shadow: 0px 3px 6px #00000029;
-  padding: 4.5rem;
+  padding: 2rem;
   margin: auto 0;
-  height: 37rem;
+  height: 100%;
   width: 100%;
   flex-direction: column;
 }
-.heading {
-  color: var(--thick-blue);
-  font-size: 1.4rem;
-  font-weight: 400;
+
+/* start of contact_us_info_pane */
+.contact_us_info_pane {
+  color: #ffffffd8;
+  padding: 1rem 1.2rem;
+  font-size: 1rem;
 }
-.post_person_box .heading {
-  font-size: 1.8rem;
-  text-align: center;
-  padding: 0 0 1rem 0;
+.contact_us_info_pane_header {
+  font-size: 1.1rem;
+  margin-bottom: 10%;
+}
+.contact_us_info_pane p:not(.contact_us_info_pane_header) {
+  margin: 5% 0;
+}
+.icon {
+  margin-right: 0.8rem;
+}
+.circle_box {
+  /* we dont need this extra stying when we get to the laptopscreen we can turn it to a playground! */
+  display: none;
+}
+.contact_us_info_pane_socials {
+  margin-top: 30px;
+}
+.contact_us_info_pane_socials a {
+  color: #ffffffd8;
+  padding-right: 10px;
+}
+
+/* end of contact_us_info_pane */
+
+.submit_contact_btn {
+  width: 30%;
 }
 
 @media only screen and (min-width: 600px) {
@@ -31,12 +60,6 @@
 }
 
 @media screen and (min-width: 700px) {
-  .submit_contact_btn {
-    display: inline-block;
-    width: 30%;
-    border-radius: 10px;
-  }
-
   .container {
     display: grid;
     grid-template-columns: 22% auto;
@@ -69,7 +92,7 @@
 
 @media screen and (min-width: 900px) {
   .contact_us_info_pane {
-    height: 70%;
+    height: 62%;
     width: 90%;
   }
   .circle_box {

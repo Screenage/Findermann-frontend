@@ -1,11 +1,10 @@
 import Head from "next/head";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
-import styles from "../styles/Signup.module.css";
+import Link from "next/link";
+import styles from "../styles/signup.module.css";
 import Button from "../Components/Buttons/Button";
-import InputField from "../Components/Inputs/Inputs";
+import Field from "../Components/Field/Field";
 
-export default function Home() {
+export default function signup() {
   return (
     <>
       {/* <!-- start of container --> */}
@@ -21,28 +20,63 @@ export default function Home() {
           className={`${styles["signupForm"]} ${styles["signup"]}`}
         >
           <h2>Sign up</h2>
-          <div className="post_person_info">
-            <InputField text="First Name:" />
-            <InputField text="Last Name:" />
-            <InputField text="Email:" />
-            <InputField text="Phone Number:" />
-            <InputField text="Username:" />
-            <InputField text="Password:" />
-            <div className={styles.select_box}>
-              <select name="" className={styles.state} id="">
-                <option value selected>
-                  State
-                </option>
-              </select>
-              <div className={styles.select_drop_down}>
-                <FontAwesomeIcon icon={faAngleDown} />
-              </div>
-            </div>
-            <InputField text="Address:" />
+          <div className={styles.post_person_info}>
+            <Field
+              text="First Name"
+              type="text"
+              name="fName"
+              fieldType="Input"
+            />
+
+            <Field
+              text="Last Name"
+              type="text"
+              name="lName"
+              fieldType="Input"
+            />
+
+            <Field text="Email" type="email" name="email" fieldType="Input" />
+
+            <Field
+              text="Phone Number"
+              type="number"
+              name="phoneNumber"
+              fieldType="Input"
+            />
+
+            <Field text="Username" type="text" name="name" fieldType="Input" />
+
+            <Field
+              text="Password"
+              type="password"
+              name="password"
+              fieldType="Input"
+            />
+
+            <Field
+              text="State"
+              type="text"
+              name="state"
+              fieldType="Select"
+              dropDown
+            />
+
+            <Field
+              text="Address"
+              type="text"
+              name="address"
+              fieldType="Input"
+            />
           </div>
-          <Button text="Sign up" width="47%" />
+          <Button
+            type="submit"
+            text="Sign up"
+            width="47%"
+            // margin="2.5rem 0 0 0 "
+          />
           <p>
-            Already have an account? <a href="login.html">Sign in</a>{" "}
+            Already have an account?
+            <Link href="/login"> Sign in </Link>
           </p>
         </form>
 

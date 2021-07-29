@@ -1,7 +1,5 @@
 import styles from "./CategoryItem.module.css";
 import Image from "next/image";
-import Link from "next/link";
-import { useEffect } from "react/cjs/react.development";
 
 const CategoryItem = ({
   imageSrc,
@@ -12,10 +10,6 @@ const CategoryItem = ({
   itemReward,
   itemAd,
 }) => {
-  useEffect(() => {
-    console.log(itemSection);
-  }, []);
-
   return (
     <>
       {/* start of item */}
