@@ -47,10 +47,13 @@ function ImageCarousel({ slides }) {
             key={index}
           >
             {index === current && (
-              <img
+              <Image
                 src={slide.image}
                 alt="travel image"
-                className={styles.image}
+                // className={styles.image}
+                width={715}
+                height={490}
+                // layout="responsive"
               />
             )}
           </div>

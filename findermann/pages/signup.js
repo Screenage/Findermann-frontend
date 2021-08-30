@@ -72,6 +72,7 @@ export default function signup() {
             type="submit"
             text="Sign up"
             width="47%"
+            to="/userDashboard"
             // margin="2.5rem 0 0 0 "
           />
           <p>

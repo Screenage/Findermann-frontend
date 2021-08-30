@@ -156,8 +156,10 @@
   }
   .items_grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 10rem);
+    grid-template-columns: repeat(5, 1fr);
     width: 100%;
+    grid-gap: 30px;
+    gap: 30px;
   }
   .items_grid .foundItems_grid {
     grid-auto-rows: minmax(auto, auto);

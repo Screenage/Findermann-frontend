@@ -8,6 +8,7 @@
   height: 5rem;
   background-color: #f9f1ed;
   margin-bottom: 0.5rem;
+  cursor: pointer;
 }
 
 .category_icon {

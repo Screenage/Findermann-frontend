@@ -48,7 +48,8 @@ textarea {
 }
 .container {
   padding: 1rem 0.9rem;
-  max-width: 700px;
+  /* width: 50rem; */
+  /* max-width: 700px; */
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -57,7 +58,7 @@ textarea {
 }
 .heading {
   color: var(--thick-blue);
-  font-size: 1.4rem;
+  font-size: 2.2rem;
   font-weight: 400;
 }
 .some_text {
@@ -72,12 +73,19 @@ textarea {
 
 /* Start of General Form Styles */
 .post_person_box {
-  margin: 7% 0;
+  margin: 2.5rem 0;
+  width: 70rem;
 }
 /* End of General Form Styles*/
 
 /* Start of Upload Image Section */
-
+.upload_images_section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem 0 0 0;
+}
 .upload_image_container {
   display: grid;
   justify-content: center;
@@ -85,6 +93,7 @@ textarea {
   grid-template-columns: repeat(2, 1fr);
   row-gap: 16px;
   column-gap: 3%;
+  width: 100%;
 }
 
 /* End Upload Image Section */
@@ -101,7 +110,8 @@ textarea {
   color: #9f3831;
   margin: 0 0 2% 0;
 }
-.items_header h2 {
+.items_header h2,
+.other_popular_categories h2 {
   color: #9f3831;
   padding: 0 0 0.7rem 0;
   font-size: 2rem;
@@ -112,7 +122,8 @@ textarea {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  width: 20%;
+
+  cursor: pointer;
 }
 .items_header {
   margin-left: 6px;
@@ -130,7 +141,15 @@ textarea {
     justify-content: space-between;
   }
 }
-
+@media only screen and (min-width: 600px) {
+  .post_person_info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 40px;
+    width: 100%;
+    padding: 2rem 0 0 0;
+  }
+}
 @media screen and (min-width: 1000px) {
   .items_grid {
     display: grid;

@@ -121,7 +121,13 @@ function missingPersonForm() {
               <ImageUpload />
             </div>
 
-            <Button type="submit" text="Post" width="70%" margin="2.5rem 0" />
+            <Button
+              type="submit"
+              text="Post"
+              width="70%"
+              margin="2.5rem 0"
+              to="/subscription"
+            />
           </div>
         </div>
       </>

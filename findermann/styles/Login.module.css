@@ -13,6 +13,7 @@
   /* margin: 5% auto 15% auto; */
   width: 100%;
   max-width: 28rem;
+  padding-bottom: 10rem;
 }
 .input_box input {
   border: transparent;
@@ -43,6 +44,7 @@
   justify-content: space-between;
   align-items: center;
   color: var(--thick-blue);
+  font-size: 0.85rem;
 }
 .extra_login_info__rememberMe {
   display: flex;
@@ -68,4 +70,5 @@
 
 .extra_login_info__signUp {
   padding: 3rem 0 0 0;
+  font-size: 0.85rem;
 }

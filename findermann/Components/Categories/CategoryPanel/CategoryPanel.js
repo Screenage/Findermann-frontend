@@ -43,7 +43,7 @@ const CategoryPanel = ({ icon, text, to }) => {
           className={styles.category_icon}
           icon={["fas", `${icon}`]}
         />
-        <Link href="/login">
+        <Link href={to} passHref>
           <div className={styles.category_content}>
             <p>{text} </p>
             <FontAwesomeIcon

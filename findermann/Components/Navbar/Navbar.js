@@ -1,7 +1,8 @@
 import styles from "./Navbar.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
 
 const Navbar = () => {
   return (
@@ -10,8 +11,9 @@ const Navbar = () => {
 
       <nav>
         <div className={styles.nav}>
-          <h2 id={styles["finderman-Logo"]}>Finderman</h2>
-
+          <Link href="/" passHref>
+            <h2 id={styles["finderman-Logo"]}>Finderman</h2>
+          </Link>
           {/* Start of mobile navlinks */}
 
           <ul className={styles.navlinks}>
@@ -24,9 +26,9 @@ const Navbar = () => {
 
                 <div className={styles["select-container"]}>
                   <div className={styles["select-icon"]}>
-                    <FontAwesomeIcon icon={faAngleDown} />
+                    <FontAwesomeIcon icon={faChevronDown} />
                   </div>
-                  <select name="" id="loction">
+                  <select className={styles.select} id="filter">
                     <option value="" selected>
                       Location
                     </option>
@@ -44,25 +46,33 @@ const Navbar = () => {
             </form>
 
             <li>
-              <a href="ListOfItems.html">Missing items</a>
+              <Link href="/category" passHref>
+                Missing items
+              </Link>
             </li>
             <li>
-              <a href="ListOfItems2.html">Found items</a>
+              <Link href="/category" passHref>
+                Found items
+              </Link>
             </li>
             <li>
-              <a href="login.html">signin</a>
+              <Link href="/login" passHref>
+                Sign in
+              </Link>
             </li>
             <li>
-              <a href="signup.html">register</a>
+              <Link href="/signup" passHref>
+                Register
+              </Link>
             </li>
             <li>
-              <a href="index.html">Post Ad</a>
+              <Link href="/postItem" passHref>
+                Post Ad
+              </Link>
             </li>
           </ul>
 
           {/* End of mobile navlinks */}
-
-          {/* --------------------------- */}
 
           {/* Start of laptop navlinks */}
 
@@ -79,7 +89,10 @@ const Navbar = () => {
                 {/* <!-- start of select continer --> */}
                 <div className={styles["select-container"]}>
                   <div className={styles["select-icon"]}>
-                    <FontAwesomeIcon icon={faAngleDown} />
+                    <FontAwesomeIcon
+                      icon={faChevronDown}
+                      className={styles.icon}
+                    />
                   </div>
                   <select name="" id="loction">
                     <option value="" selected>
@@ -100,29 +113,37 @@ const Navbar = () => {
               <div
                 className={`${styles["extra_links__links"]} ${styles["extra_links__links--spaceOne"]}`}
               >
-                <li className={`${styles["extra_links__item"]}`}>
-                  <a href="ListOfItems.html">Missing items</a>
-                </li>
-                <li
-                  className={`${styles["extra_links__item"]} ${styles["extra_links__item--padding"]}`}
-                >
-                  <a href="ListOfItems2.html">Found items</a>
-                </li>
+                <Link href="/category" passHref>
+                  <li className={`${styles["extra_links__item"]}`}>
+                    Missing items
+                  </li>
+                </Link>
+                <Link href="/category" passHref>
+                  <li
+                    className={`${styles["extra_links__item"]} ${styles["extra_links__item--padding"]}`}
+                  >
+                    Found items
+                  </li>
+                </Link>
               </div>
 
               <div
                 className={`${styles["extra_links__links"]} ${styles["extra_links__links--spaceTwo"]}`}
               >
                 <li>
-                  <a href="login.html">signin</a>
-                  <a href="signup.html">/register</a>
+                  <Link href="/login" passHref>
+                    Signin
+                  </Link>
+                  <Link href="/signup" passHref>
+                    /Register
+                  </Link>
                 </li>
                 <li
                   className={`${styles["extra_links__item"]} ${styles["extra_links__item--padding"]}`}
                 >
-                  <a href="index.html" className={styles.post_ad}>
-                    Post Ad
-                  </a>
+                  <Link href="/postItem" passHref>
+                    <div className={styles.post_ad}>Post Ad</div>
+                  </Link>
                 </li>
               </div>
             </div>

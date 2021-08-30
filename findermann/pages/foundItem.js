@@ -15,7 +15,7 @@ import {
   faMapMarkerAlt,
 } from "@fortawesome/free-solid-svg-icons";
 
-import { SliderData } from "./data";
+// import { SliderData } from "./data";
 
 function foundItem() {
   return (
@@ -50,7 +50,9 @@ function foundItem() {
         <div className={styles.detail_container}>
           {/* start of slider_container */}
           <div className={styles.slider_container}>
-            <ImageCarousel slides={SliderData} />
+            {/* <ImageCarousel
+            // slides={SliderData}
+            /> */}
           </div>
           {/* start of slider_container */}
           {/* start of upload_images_section */}
@@ -104,7 +106,7 @@ function foundItem() {
           <div className={styles.item_comment_section}>
             <h3 className={styles.item_comment_section__header}>Comments</h3>
             {/* start of create_item_comment */}
-            <form action className={styles.create_item_comment}>
+            <form action="" className={styles.create_item_comment}>
               <div className={styles.comment_owner_info}>
                 <div className={styles.owner_of_comment_image}>
                   <Image

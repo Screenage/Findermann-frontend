@@ -35,6 +35,10 @@
   background-color: #1a508c;
   text-align: center;
   border-bottom: 1px solid #ffffff21;
+  cursor: pointer;
+}
+.user_nav_pane__links :not(:first-child) {
+  margin-top: 0.05rem;
 }
 .iconDiv {
   width: 3rem;

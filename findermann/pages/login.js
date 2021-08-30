@@ -26,7 +26,7 @@ export default function Home() {
             fieldType="Input"
           />
 
-          <Button text="Login" width="100%" />
+          <Button text="Login" width="100%" to="/userDashboard" />
 
           <div className={styles.extra_login_info}>
             <div className={styles.extra_login_info__rememberMe}>
@@ -38,7 +38,11 @@ export default function Home() {
           </div>
 
           <p className={styles.extra_login_info__signUp}>
-            Don't have an account? <Link href="/signup"> Sign up </Link>
+            {`
+            Don't have an account?
+      `}
+
+            <Link href="/signup"> Sign up </Link>
           </p>
         </form>
       </div>

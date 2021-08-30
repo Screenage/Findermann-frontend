@@ -27,6 +27,7 @@ function subscription() {
             </span>
             <div className={styles.subscribe_btn}>
               <Button
+                to="/checkout"
                 text="Subscribe"
                 width="100%"
                 margin="1.3rem 0 0 0"
@@ -65,6 +66,7 @@ function subscription() {
             </span>
             <div className={styles.subscribe_btn}>
               <Button
+                to="/checkout"
                 text="Subscribe"
                 width="100%"
                 margin="1.3rem 0 0 0"
@@ -102,6 +104,7 @@ function subscription() {
 
             <div className={styles.subscribe_btn}>
               <Button
+                to="/checkout"
                 text="Subscribe"
                 width="100%"
                 margin="1.3rem 0 0 0"

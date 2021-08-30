@@ -28,7 +28,7 @@ const DashboardPanel = () => {
         </div>
         <div className={styles.user_nav_pane__links}>
           <li>
-            <Link href="/">
+            <Link href="/userDashboard" passHref>
               <div className={styles.user_nav_pane__links_content}>
                 <div className={styles.iconDiv}>
                   <FontAwesomeIcon icon={faUser} className={styles.icon} />{" "}
@@ -38,7 +38,7 @@ const DashboardPanel = () => {
             </Link>
           </li>
           <li>
-            <Link href="/editUploadPage">
+            <Link href="/editUploadPage" passHref>
               <div className={styles.user_nav_pane__links_content}>
                 <div className={styles.iconDiv}>
                   <FontAwesomeIcon icon={faUserEdit} className={styles.icon} />
@@ -48,7 +48,7 @@ const DashboardPanel = () => {
             </Link>
           </li>
           <li>
-            <Link href="/subscriptionHistory">
+            <Link href="/subscriptionHistory" passHref>
               <div className={styles.user_nav_pane__links_content}>
                 <div className={styles.iconDiv}>
                   <FontAwesomeIcon
@@ -61,7 +61,7 @@ const DashboardPanel = () => {
             </Link>
           </li>
           <li>
-            <Link href="/resetPassword">
+            <Link href="/resetPassword" passHref>
               <div className={styles.user_nav_pane__links_content}>
                 <div className={styles.iconDiv}>
                   <FontAwesomeIcon icon={faKey} className={styles.icon} />{" "}

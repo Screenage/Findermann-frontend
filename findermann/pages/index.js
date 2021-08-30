@@ -4,6 +4,7 @@ import Head from "next/head";
 import Link from "next/link";
 import styles from "../styles/home.module.css";
 import Category from "../Components/Categories/CategoryPanel/CategoryPanel";
+import CategoryCard from "../Components/Categories/CategoryCard/CategoryCard";
 import CategoryItem from "../Components/Categories/CategoryItem/CategoryItem";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -14,10 +15,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
-  useEffect(() => {
-    console.log(itemSection);
-  }, []);
-
   return (
     <>
       {/* <!-- start of container --> */}
@@ -26,57 +23,56 @@ export default function Home() {
           {/* start of items_nav */}
           <div className={styles.items_nav}>
             {/* this is where u will see vehicles mobile phones electronics nav */}
-
-            <Category text={"Vehicles"} icon={"car"} to={"/login"} />
+            <Category text={"Vehicles"} icon={"car"} to={"/category"} />
 
             <Category
               text={"Mobile phones & tablets"}
               icon={"phone"}
-              to={"/login"}
+              to={"/category"}
             />
 
-            <Category text={" Eletronics"} icon={"tv"} to={"/login"} />
+            <Category text={"Electronics"} icon={"tv"} to={"/category"} />
 
             <Category
               text={" Home Funiture & Appliance"}
               icon={"chair"}
-              to={"/login"}
+              to={"/category"}
             />
 
             <Category
               text={"Health & Beauty"}
               icon={"stethoscope"}
-              to={"/login"}
+              to={"/category"}
             />
 
-            <Category text={"Fashion"} icon={"tshirt"} to={"/login"} />
+            <Category text={"Fashion"} icon={"tshirt"} to={"/category"} />
 
             <Category
               text={"Sports & outdoors"}
               icon={"volleyball-ball"}
-              to={"/login"}
+              to={"/category"}
             />
 
-            <Category text={"People"} icon={"users"} to={"/login"} />
+            <Category text={"People"} icon={"users"} to={"/category"} />
 
-            <Category text={"Animals & Pets"} icon={"dog"} to={"/login"} />
+            <Category text={"Animals & Pets"} icon={"dog"} to={"/category"} />
 
             <Category
               text={"Agriculture & Food"}
               icon={"hamburger"}
-              to={"/login"}
+              to={"/category"}
             />
 
             <Category
               text={"Repair & Construction"}
               icon={"wrench"}
-              to={"/login"}
+              to={"/category"}
             />
 
             <Category
               text={"Commercial Equipments & Tools"}
               icon={"toolbox"}
-              to={"/login"}
+              to={"/category"}
             />
           </div>
           {/* end of items_nav */}
@@ -86,7 +82,7 @@ export default function Home() {
             <div className="items_container">
               <div className="items_header">
                 <h2>Popular in Fashion</h2>
-                <Link href="/login">
+                <Link href="/category" passHref>
                   <div className="items_header_link">
                     <p> View more </p>{" "}
                     <FontAwesomeIcon
@@ -104,6 +100,7 @@ export default function Home() {
                   itemName="Nike Shoe"
                   itemStatus="Recovered"
                   itemReward="₦5,000.00"
+                  to={"/missingItem"}
                   itemAd
                 />
                 <CategoryItem
@@ -112,6 +109,7 @@ export default function Home() {
                   itemName="Nike Shoe"
                   itemStatus="Recovered"
                   itemReward="₦5,000.00"
+                  to={"/missingItem"}
                   itemAd
                 />{" "}
                 <CategoryItem
@@ -120,6 +118,7 @@ export default function Home() {
                   itemName="Nike Shoe"
                   itemStatus="Recovered"
                   itemReward="₦5,000.00"
+                  to={"/missingItem"}
                   itemAd
                 />{" "}
                 <CategoryItem
@@ -128,6 +127,7 @@ export default function Home() {
                   itemName="Nike Shoe"
                   itemStatus="Recovered"
                   itemReward="₦5,000.00"
+                  to={"/missingItem"}
                   itemAd
                 />{" "}
                 <CategoryItem
@@ -136,6 +136,7 @@ export default function Home() {
                   itemName="Nike Shoe"
                   itemStatus="Recovered"
                   itemReward="₦5,000.00"
+                  to={"/missingItem"}
                   itemAd
                 />
                 <CategoryItem
@@ -144,6 +145,7 @@ export default function Home() {
                   itemName="Nike Shoe"
                   itemStatus="Recovered"
                   itemReward="₦5,000.00"
+                  to={"/missingItem"}
                   itemAd
                 />
                 <CategoryItem
@@ -152,6 +154,7 @@ export default function Home() {
                   itemName="Nike Shoe"
                   itemStatus="Recovered"
                   itemReward="₦5,000.00"
+                  to={"/missingItem"}
                   itemAd
                 />
                 <CategoryItem
@@ -160,6 +163,7 @@ export default function Home() {
                   itemName="Nike Shoe"
                   itemStatus="Recovered"
                   itemReward="₦5,000.00"
+                  to={"/missingItem"}
                   itemAd
                 />
                 <CategoryItem
@@ -168,6 +172,7 @@ export default function Home() {
                   itemName="Nike Shoe"
                   itemStatus="Recovered"
                   itemReward="₦5,000.00"
+                  to={"/missingItem"}
                   itemAd
                 />
                 <CategoryItem
@@ -176,6 +181,7 @@ export default function Home() {
                   itemName="Nike Shoe"
                   itemStatus="Recovered"
                   itemReward="₦5,000.00"
+                  to={"/missingItem"}
                   itemAd
                 />
               </div>
@@ -189,10 +195,14 @@ export default function Home() {
 
             <div className="items_container">
               <div className="items_header">
-                <h2 style={{ color: "red" }}>Popular in Person</h2>
-                <Link href="/login">
+                <h2>Popular in Person</h2>
+                <Link href="/category" passHref>
                   <div className="items_header_link">
-                    <p> View more </p> <FontAwesomeIcon icon={faChevronRight} />
+                    <p> View more </p>{" "}
+                    <FontAwesomeIcon
+                      icon={faChevronRight}
+                      className={styles.icon}
+                    />
                   </div>
                 </Link>
               </div>
@@ -204,6 +214,7 @@ export default function Home() {
                   itemName="Nike Shoe"
                   itemStatus="Recovered"
                   itemReward="₦5,000.00"
+                  to={"/missingItem"}
                   itemAd
                 />
                 <CategoryItem
@@ -212,6 +223,7 @@ export default function Home() {
                   itemName="Nike Shoe"
                   itemStatus="Recovered"
                   itemReward="₦5,000.00"
+                  to={"/missingItem"}
                   itemAd
                 />{" "}
                 <CategoryItem
@@ -220,6 +232,7 @@ export default function Home() {
                   itemName="Nike Shoe"
                   itemStatus="Recovered"
                   itemReward="₦5,000.00"
+                  to={"/missingItem"}
                   itemAd
                 />{" "}
                 <CategoryItem
@@ -228,6 +241,7 @@ export default function Home() {
                   itemName="Nike Shoe"
                   itemStatus="Recovered"
                   itemReward="₦5,000.00"
+                  to={"/missingItem"}
                   itemAd
                 />{" "}
                 <CategoryItem
@@ -236,6 +250,7 @@ export default function Home() {
                   itemName="Nike Shoe"
                   itemStatus="Recovered"
                   itemReward="₦5,000.00"
+                  to={"/missingItem"}
                   itemAd
                 />
                 <CategoryItem
@@ -244,6 +259,7 @@ export default function Home() {
                   itemName="Nike Shoe"
                   itemStatus="Recovered"
                   itemReward="₦5,000.00"
+                  to={"/missingItem"}
                   itemAd
                 />
                 <CategoryItem
@@ -252,6 +268,7 @@ export default function Home() {
                   itemName="Nike Shoe"
                   itemStatus="Recovered"
                   itemReward="₦5,000.00"
+                  to={"/missingItem"}
                   itemAd
                 />
                 <CategoryItem
@@ -260,6 +277,7 @@ export default function Home() {
                   itemName="Nike Shoe"
                   itemStatus="Recovered"
                   itemReward="₦5,000.00"
+                  to={"/missingItem"}
                   itemAd
                 />
                 <CategoryItem
@@ -268,6 +286,7 @@ export default function Home() {
                   itemName="Nike Shoe"
                   itemStatus="Recovered"
                   itemReward="₦5,000.00"
+                  to={"/missingItem"}
                   itemAd
                 />
                 <CategoryItem
@@ -276,6 +295,7 @@ export default function Home() {
                   itemName="Nike Shoe"
                   itemStatus="Recovered"
                   itemReward="₦5,000.00"
+                  to={"/missingItem"}
                   itemAd
                 />
               </div>
@@ -285,20 +305,23 @@ export default function Home() {
             {/* Start of Other Popular Categories */}
 
             <div className="other_popular_categories">
-              <h3>Other popular categories</h3>
+              <h2>Other popular categories</h2>
               <div className={styles.popular_categories_grid}>
-                <div className={styles.popular_categories_item}>
-                  <FontAwesomeIcon icon={faToolbox} />
-                  <p>Commercial Equipments</p>
-                </div>
-                <div className={styles.popular_categories_item}>
-                  <FontAwesomeIcon icon={faPhone} />
-                  <p>Mobile Phone &amp; Tabletes</p>
-                </div>
-                <div className={styles.popular_categories_item}>
-                  <FontAwesomeIcon icon={faDog} />
-                  <p>Animals &amp; Pets</p>
-                </div>
+                <CategoryCard
+                  text={"Commercial Equipments & Tools"}
+                  icon={"toolbox"}
+                  to={"/category"}
+                />
+                <CategoryCard
+                  text={"Mobile phones & tablets"}
+                  icon={"phone"}
+                  to={"/category"}
+                />
+                <CategoryCard
+                  text={"Animals & Pets"}
+                  icon={"dog"}
+                  to={"/category"}
+                />
               </div>
             </div>
 
@@ -310,10 +333,14 @@ export default function Home() {
 
             <div className="items_container">
               <div className="items_header">
-                <h2 style={{ color: "#FF1302" }}>Popular in Electronics</h2>
-                <Link href="/login">
+                <h2>Popular in Electronics</h2>
+                <Link href="/category" passHref>
                   <div className="items_header_link">
-                    <p> View more </p> <FontAwesomeIcon icon={faChevronRight} />
+                    <p> View more </p>{" "}
+                    <FontAwesomeIcon
+                      icon={faChevronRight}
+                      className={styles.icon}
+                    />
                   </div>
                 </Link>
               </div>
@@ -327,6 +354,7 @@ export default function Home() {
                   itemName="Nike Shoe"
                   itemStatus="Recovered"
                   itemReward="₦5,000.00"
+                  to={"/missingItem"}
                   itemAd
                 />
                 <CategoryItem
@@ -335,6 +363,7 @@ export default function Home() {
                   itemName="Nike Shoe"
                   itemStatus="Recovered"
                   itemReward="₦5,000.00"
+                  to={"/missingItem"}
                   itemAd
                 />{" "}
                 <CategoryItem
@@ -343,6 +372,7 @@ export default function Home() {
                   itemName="Nike Shoe"
                   itemStatus="Recovered"
                   itemReward="₦5,000.00"
+                  to={"/missingItem"}
                   itemAd
                 />{" "}
                 <CategoryItem
@@ -351,6 +381,7 @@ export default function Home() {
                   itemName="Nike Shoe"
                   itemStatus="Recovered"
                   itemReward="₦5,000.00"
+                  to={"/missingItem"}
                   itemAd
                 />{" "}
                 <CategoryItem
@@ -359,6 +390,7 @@ export default function Home() {
                   itemName="Nike Shoe"
                   itemStatus="Recovered"
                   itemReward="₦5,000.00"
+                  to={"/missingItem"}
                   itemAd
                 />{" "}
                 <CategoryItem
@@ -367,6 +399,7 @@ export default function Home() {
                   itemName="Nike Shoe"
                   itemStatus="Recovered"
                   itemReward="₦5,000.00"
+                  to={"/missingItem"}
                   itemAd
                 />{" "}
                 <CategoryItem
@@ -375,6 +408,7 @@ export default function Home() {
                   itemName="Nike Shoe"
                   itemStatus="Recovered"
                   itemReward="₦5,000.00"
+                  to={"/missingItem"}
                   itemAd
                 />{" "}
                 <CategoryItem
@@ -383,6 +417,7 @@ export default function Home() {
                   itemName="Nike Shoe"
                   itemStatus="Recovered"
                   itemReward="₦5,000.00"
+                  to={"/missingItem"}
                   itemAd
                 />
                 <CategoryItem
@@ -391,6 +426,7 @@ export default function Home() {
                   itemName="Nike Shoe"
                   itemStatus="Recovered"
                   itemReward="₦5,000.00"
+                  to={"/missingItem"}
                   itemAd
                 />
                 <CategoryItem
@@ -399,6 +435,7 @@ export default function Home() {
                   itemName="Nike Shoe"
                   itemStatus="Recovered"
                   itemReward="₦5,000.00"
+                  to={"/missingItem"}
                   itemAd
                 />
               </div>

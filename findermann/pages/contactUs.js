@@ -36,16 +36,16 @@ function contactUs() {
             <div className={styles.purple_circle} />
           </div>
           <div className={styles.contact_us_info_pane_socials}>
-            <Link href="/">
+            <Link href="/" passHref>
               <FontAwesomeIcon
                 icon={faFacebookSquare}
                 className={styles.icon}
               />
             </Link>
-            <Link href="/">
+            <Link href="/" passHref>
               <FontAwesomeIcon icon={faTwitter} className={styles.icon} />
             </Link>
-            <Link href="/">
+            <Link href="/" passHref>
               <FontAwesomeIcon icon={faInstagram} className={styles.icon} />
             </Link>
           </div>
@@ -100,7 +100,7 @@ function contactUs() {
               className={styles.text_area_section}
             />
 
-            <div class={styles.submit_contact_btn}>
+            <div className={styles.submit_contact_btn}>
               <Button
                 type="submit"
                 text="Send"

@@ -3,13 +3,31 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
-const Field = ({ fieldType, type, text, name, dropDown, cols, rows }) => {
+const Field = ({
+  fieldType,
+  type,
+  text,
+  name,
+  dropDown,
+  cols,
+  rows,
+  padding,
+  fontSize,
+}) => {
   if (fieldType == "Input") {
     return (
       <>
         {/* <!-- Start of Input Container --> */}
         <div className={styles.input_box}>
-          <input type={type} placeholder={text} name={name} />
+          <input
+            type={type}
+            placeholder={text}
+            name={name}
+            style={{
+              padding: padding,
+              fontSize: fontSize,
+            }}
+          />
         </div>
         {/* <!-- End of Input Container --> */}
       </>
@@ -19,7 +37,14 @@ const Field = ({ fieldType, type, text, name, dropDown, cols, rows }) => {
       <>
         {/* <!-- Start of Select Container --> */}
         <div className={styles.select_box}>
-          <select name={name} id={name}>
+          <select
+            name={name}
+            id={name}
+            style={{
+              padding: padding,
+              fontSize: fontSize,
+            }}
+          >
             <option value={text} disabled selected hidden>
               {text}
             </option>
@@ -36,7 +61,7 @@ const Field = ({ fieldType, type, text, name, dropDown, cols, rows }) => {
     return (
       <>
         {/* <!-- Start of Text Area Container --> */}
-        <div class={styles.text_area_section}>
+        <div className={styles.text_area_section}>
           <textarea
             name={name}
             placeholder={text}

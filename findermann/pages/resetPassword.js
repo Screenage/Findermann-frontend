@@ -22,6 +22,7 @@ export default function Home() {
             text="Reset"
             width="100%"
             margin="0.5rem 0 0 0 "
+            to="/login"
           />
         </form>
       </div>

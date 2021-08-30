@@ -20,38 +20,10 @@ export default function Category() {
       <div className={styles.content}>
         <div className={styles.container}>
           {/* start of items_nav */}
+
           <div className={styles.items_nav}>
             {/* this is where u will see vehicles mobile phones electronics nav */}
-            <div className={styles.filters}>
-              <div className={styles.location}>
-                <p>Filter By location</p>
-                <form action="">
-                  <Field
-                    text="Location"
-                    type="text"
-                    name="location"
-                    fieldType="Select"
-                    dropDown
-                  />
-                </form>
-              </div>
-              <div className={styles.type}>
-                <p>Filter By Type</p>
-                <form action="">
-                  <Field
-                    text="Type"
-                    type="text"
-                    name="type"
-                    fieldType="Select"
-                    dropDown
-                  />
-                </form>
-              </div>
-            </div>
-            <div className={styles.category}>
-              <p>Category</p>
-              <CategoryNav text={"Vehicles"} icon={"car"} to={"/login"} />
-            </div>
+            <CategoryNav />{" "}
           </div>
           {/* end of items_nav */}
 
@@ -66,6 +38,7 @@ export default function Category() {
                   itemName="Nike Shoe"
                   itemStatus="Recovered"
                   itemReward="₦5,000.00"
+                  to={"/missingItem"}
                   itemAd
                 />
                 <CategoryItem
@@ -74,6 +47,7 @@ export default function Category() {
                   itemName="Nike Shoe"
                   itemStatus="Recovered"
                   itemReward="₦5,000.00"
+                  to={"/missingItem"}
                   itemAd
                 />{" "}
                 <CategoryItem
@@ -82,6 +56,7 @@ export default function Category() {
                   itemName="Nike Shoe"
                   itemStatus="Recovered"
                   itemReward="₦5,000.00"
+                  to={"/missingItem"}
                   itemAd
                 />{" "}
                 <CategoryItem
@@ -90,6 +65,7 @@ export default function Category() {
                   itemName="Nike Shoe"
                   itemStatus="Recovered"
                   itemReward="₦5,000.00"
+                  to={"/missingItem"}
                   itemAd
                 />{" "}
                 <CategoryItem
@@ -98,6 +74,7 @@ export default function Category() {
                   itemName="Nike Shoe"
                   itemStatus="Recovered"
                   itemReward="₦5,000.00"
+                  to={"/missingItem"}
                   itemAd
                 />
                 <CategoryItem
@@ -106,6 +83,7 @@ export default function Category() {
                   itemName="Nike Shoe"
                   itemStatus="Recovered"
                   itemReward="₦5,000.00"
+                  to={"/missingItem"}
                   itemAd
                 />
                 <CategoryItem
@@ -114,6 +92,7 @@ export default function Category() {
                   itemName="Nike Shoe"
                   itemStatus="Recovered"
                   itemReward="₦5,000.00"
+                  to={"/missingItem"}
                   itemAd
                 />
                 <CategoryItem
@@ -122,6 +101,7 @@ export default function Category() {
                   itemName="Nike Shoe"
                   itemStatus="Recovered"
                   itemReward="₦5,000.00"
+                  to={"/missingItem"}
                   itemAd
                 />
                 <CategoryItem
@@ -130,6 +110,7 @@ export default function Category() {
                   itemName="Nike Shoe"
                   itemStatus="Recovered"
                   itemReward="₦5,000.00"
+                  to={"/missingItem"}
                   itemAd
                 />
                 <CategoryItem
@@ -138,6 +119,7 @@ export default function Category() {
                   itemName="Nike Shoe"
                   itemStatus="Recovered"
                   itemReward="₦5,000.00"
+                  to={"/missingItem"}
                   itemAd
                 />
               </div>

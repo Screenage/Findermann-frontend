@@ -11,6 +11,8 @@
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
   position: relative;
+  cursor: pointer;
+  background-color: #faf9f7;
 }
 .found_items {
   border-top-right-radius: 10px;
@@ -22,8 +24,6 @@
 }
 
 .item_content {
-  background-color: #faf9f7;
-
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
   position: relative;
@@ -45,7 +45,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* border-radius: 5px; */
   background-color: #9f3831;
   margin: 0 0 0 0;
   font-size: 0.7rem;
@@ -89,12 +88,12 @@
     height: 175px;
   }
   .item_content-heightTall {
-    height: 175px;
-    padding: 1.25rem 0.9rem 0rem 0.9rem;
+    /* height: 175px; */
+    padding: 1.25rem 0.9rem 1.25rem 0.9rem;
   }
   .item_content-heightShort {
-    height: 110px;
-    padding: 2.25rem 0.9rem 0rem 0.9rem;
+    /* height: 110px; */
+    padding: 2.65rem 0.9rem 2.65rem 0.9rem;
   }
   .item_content {
     display: flex;

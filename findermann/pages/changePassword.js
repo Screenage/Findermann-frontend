@@ -22,6 +22,8 @@ function changePassword() {
                 type="password"
                 name="password"
                 fieldType="Input"
+                padding="1.2rem 2rem"
+                fontSize="1rem"
               />
 
               <Field
@@ -29,6 +31,8 @@ function changePassword() {
                 type="password"
                 name="password"
                 fieldType="Input"
+                padding="1.2rem 2rem"
+                fontSize="1rem"
               />
 
               <Field
@@ -36,6 +40,8 @@ function changePassword() {
                 type="password"
                 name="password"
                 fieldType="Input"
+                padding="1.2rem 2rem"
+                fontSize="1rem"
               />
             </div>
 

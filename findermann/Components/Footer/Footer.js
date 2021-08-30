@@ -12,18 +12,18 @@ const Footer = () => {
             <div className={styles.other_link}>
               <h4>Support</h4>
               <li>
-                <Link href="/">
+                <Link href="/contactUs">
                   <a href="">Contact us</a>
                 </Link>
               </li>
               <li>
-                <Link href="/">
+                <Link href="/safetyTips">
                   <a href="">Safty Tips</a>
                 </Link>
               </li>
               <li>
-                <Link href="/">
-                  <a href="">FAQ</a>
+                <Link href="/faq">
+                  <a>FAQ</a>
                 </Link>
               </li>
             </div>
@@ -31,27 +31,23 @@ const Footer = () => {
             <div className={styles.other_link}>
               <h4>Useful Links</h4>
               <li>
-                <Link href="/">
-                  <a href="">Missing items</a>
-                </Link>
+                <Link href="/category">Missing items</Link>
               </li>
               <li>
-                <Link href="/">
-                  <a href="">Found items</a>
-                </Link>
+                <Link href="/category">Found items</Link>
               </li>
             </div>
 
             <div className={styles.other_link}>
               <h4>Social Links</h4>
               <li>
-                <a href=""> Facebook</a>
+                <Link href="/">Facebook</Link>
               </li>
               <li>
-                <a href="">Instagram</a>
+                <Link href="/">Instagram</Link>
               </li>
               <li>
-                <a href="">Twitter</a>
+                <Link href="/">Twitter</Link>
               </li>
             </div>
             <div

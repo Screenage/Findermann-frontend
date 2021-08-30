@@ -1,6 +1,7 @@
 import { useRef, useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faImage } from "@fortawesome/free-solid-svg-icons";
+import Image from "next/image";
 import styles from "./ImageCard.module.css";
 
 const ImageCard = () => {
@@ -24,8 +25,12 @@ const ImageCard = () => {
     <>
       <div className={styles.upload_image}>
         {preview ? (
-          <img
+          <Image
             src={preview}
+            width={75}
+            height={75}
+            layout="responsive"
+            alt="Item"
             style={{ objectFit: "cover" }}
             onClick={(e) => {
               e.preventDefault();
@@ -34,7 +39,7 @@ const ImageCard = () => {
           />
         ) : (
           <div
-            class={styles.add_image_content}
+            className={styles.add_image_content}
             onClick={(e) => {
               e.preventDefault();
               fileInputRef.current.click();

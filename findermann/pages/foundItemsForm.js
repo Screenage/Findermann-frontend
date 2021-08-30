@@ -18,6 +18,8 @@ const foundItemsForm = () => {
               text="Category"
               type="text"
               name="category"
+              padding="1.2rem 2rem"
+              fontSize="1rem"
               fieldType="Select"
               dropDown
             />
@@ -26,6 +28,8 @@ const foundItemsForm = () => {
               text="Sub-Category"
               type="text"
               name="subCategory"
+              padding="1.2rem 2rem"
+              fontSize="1rem"
               fieldType="Select"
               dropDown
             />
@@ -34,6 +38,8 @@ const foundItemsForm = () => {
               text="Name of item"
               type="text"
               name="nameOfItem"
+              padding="1.2rem 2rem"
+              fontSize="1rem"
               fieldType="Input"
             />
 
@@ -41,15 +47,26 @@ const foundItemsForm = () => {
               text="Address:"
               type="text"
               name="address"
+              padding="1.2rem 2rem"
+              fontSize="1rem"
               fieldType="Input"
             />
 
-            <Field text="Email" type="email" name="email" fieldType="Input" />
+            <Field
+              text="Email"
+              type="email"
+              name="email"
+              padding="1.2rem 2rem"
+              fontSize="1rem"
+              fieldType="Input"
+            />
 
             <Field
               text="State"
               type="text"
               name="state"
+              padding="1.2rem 2rem"
+              fontSize="1rem"
               fieldType="Select"
               dropDown
             />
@@ -58,6 +75,8 @@ const foundItemsForm = () => {
               text="Phone Number:"
               type="text"
               name="phoneNumber"
+              padding="1.2rem 2rem"
+              fontSize="1rem"
               fieldType="Input"
             />
 
@@ -65,6 +84,8 @@ const foundItemsForm = () => {
               text="Local Government"
               type="text"
               name="localGovernment"
+              padding="1.2rem 2rem"
+              fontSize="1rem"
               fieldType="Select"
               dropDown
             />
@@ -73,6 +94,8 @@ const foundItemsForm = () => {
               text="Police Station Holding item:"
               type="text"
               name="policeStation"
+              padding="1.2rem 2rem"
+              fontSize="1rem"
               fieldType="Input"
             />
           </form>

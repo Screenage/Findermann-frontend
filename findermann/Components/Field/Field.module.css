@@ -9,10 +9,9 @@
   margin: 4% 0;
 }
 .input_box input::placeholder {
-  /* Chrome, Firefox, Opera, Safari 10.1+ */
   font-weight: 500;
   color: var(--lightBlue);
-  opacity: 1; /* Firefox */
+  opacity: 1;
 }
 
 .select_box {
@@ -52,6 +51,7 @@
   background-color: #ececec99;
   width: 100%;
   margin: 4% 0;
+  cursor: text;
 }
 .text_area_section textarea::placeholder {
   color: #0d325ccc;
