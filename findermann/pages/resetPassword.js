@@ -10,7 +10,7 @@ export default function Home() {
       <div className="container">
         <form action="" className={styles.resetPassword}>
           <h2>Reset Password</h2>
-          <p>A link will be sent to your registers email address</p>
+          <p>Enter new password</p>
           <Field
             text="Enter New Password"
             type="password"

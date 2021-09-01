@@ -17,6 +17,7 @@ export default function Home() {
             type="text"
             name="username"
             fieldType="Input"
+            margin="1rem 0"
           />
 
           <Field
@@ -24,9 +25,15 @@ export default function Home() {
             type="password"
             name="password"
             fieldType="Input"
+            margin="1rem 0"
           />
 
-          <Button text="Login" width="100%" to="/userDashboard" />
+          <Button
+            text="Login"
+            width="100%"
+            to="/userDashboard"
+            margin="1rem 0 "
+          />
 
           <div className={styles.extra_login_info}>
             <div className={styles.extra_login_info__rememberMe}>

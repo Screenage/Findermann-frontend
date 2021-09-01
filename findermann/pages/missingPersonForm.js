@@ -108,17 +108,17 @@ function missingPersonForm() {
               />
             </form>
           </div>
-          <div>
+          <div className="upload_images_section">
             <h3 className="heading">Upload Images</h3>
             <br />
             <div className="upload_image_container">
-              <ImageUpload />
+              <ImageUpload height="15rem" width="15rem" />
 
-              <ImageUpload />
+              <ImageUpload height="15rem" width="15rem" />
 
-              <ImageUpload />
+              <ImageUpload height="15rem" width="15rem" />
 
-              <ImageUpload />
+              <ImageUpload height="15rem" width="15rem" />
             </div>
 
             <Button

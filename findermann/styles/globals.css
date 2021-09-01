@@ -81,10 +81,11 @@ textarea {
 /* Start of Upload Image Section */
 .upload_images_section {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center;
+  align-items: center; */
   flex-direction: column;
   padding: 1rem 0 0 0;
+  width: 70rem;
 }
 .upload_image_container {
   display: grid;
@@ -211,6 +212,13 @@ textarea {
     justify-content: center;
     align-items: center;
     grid-template-columns: repeat(4, 1fr);
+  }
+  .upload_image_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0 2rem 0;
+    /* grid-template-columns: repeat(4, 1fr); */
   }
 }
 

@@ -56,7 +56,7 @@ function missingItem() {
           </div>
           {/* start of slider_container */}
           {/* start of upload_images_section */}
-          <div className="upload_images_section">
+          <div className={styles.upload_images_section}>
             {/* <h3 class="heading">Upload Images</h3> */}
             <br />
             <div className="upload_image_container">

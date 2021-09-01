@@ -1,7 +1,15 @@
 import styles from "./Button.module.css";
 import Image from "next/image";
 import Link from "next/link";
-const Button = ({ text, width, margin, borderRadius, fontSize, to }) => {
+const Button = ({
+  text,
+  width,
+  margin,
+  borderRadius,
+  fontSize,
+  to,
+  padding,
+}) => {
   return (
     <>
       {/* <!-- start of Button container --> */}
@@ -13,6 +21,7 @@ const Button = ({ text, width, margin, borderRadius, fontSize, to }) => {
             style={{
               width: width,
               margin: margin,
+              padding: padding,
               borderRadius: borderRadius,
               fontSize: fontSize,
             }}

@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from "react";
 import styles from "./Navbar.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
@@ -5,6 +6,22 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 
 const Navbar = () => {
+  const [clickButton, setClickButton] = useState(true);
+  const [filterName, setFilterName] = useState("Location");
+  // var filterName;
+
+  const handleChange = () => {
+    if (clickButton === true) {
+      setClickButton(false);
+    } else if (clickButton === false) {
+      setClickButton(true);
+    }
+  };
+  const changeFilter = (e) => {
+    console.log(e.target.innerText);
+    setFilterName(e.target.innerText);
+  };
+
   return (
     <>
       {/* <!-- start of nav --> */}
@@ -82,28 +99,45 @@ const Navbar = () => {
               <div className={styles.inputContainer}>
                 <input
                   type="text"
-                  id={styles["laptop_navlinks_searchText"]}
+                  id={styles.laptop_navlinks_searchText}
                   placeholder="Search"
                 ></input>
 
-                {/* <!-- start of select continer --> */}
-                <div className={styles["select-container"]}>
-                  <div className={styles["select-icon"]}>
-                    <FontAwesomeIcon
-                      icon={faChevronDown}
-                      className={styles.icon}
-                    />
-                  </div>
-                  <select name="" id="loction">
-                    <option value="" selected>
-                      Location
-                    </option>
-                    <option value="">Hello World</option>
-                  </select>
+                {/* <!-- start of select container --> */}
+
+                <div className={styles.select_container} onClick={handleChange}>
+                  {" "}
+                  <span
+                    className={` ${
+                      clickButton
+                        ? styles.button_span_off
+                        : styles.button_span_on
+                    }`}
+                  >
+                    <FontAwesomeIcon icon={faChevronDown} />
+                  </span>
+                  {filterName}
+                  <ul
+                    className={`${styles.select_container_options} 
+                    ${
+                      clickButton
+                        ? styles.container_disappear
+                        : styles.Container_appear
+                    }
+                    `}
+                    onClick={() => {
+                      setClickButton(false);
+                    }}
+                  >
+                    <li onClick={changeFilter}>Location</li>
+                    <li onClick={changeFilter}>Missing</li>
+                    <li onClick={changeFilter}>Found</li>
+                  </ul>
                 </div>
+
                 {/* <!-- end of select continer --> */}
               </div>
-              <button className={`${styles.btn} ${styles["nav-search"]}`}>
+              <button className={`${styles.btn} ${styles.nav_search}`}>
                 Search
               </button>
               {/* <!-- end of input container --> */}

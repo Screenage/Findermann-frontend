@@ -44,7 +44,8 @@
   justify-content: space-between;
   align-items: center;
   color: var(--thick-blue);
-  font-size: 0.85rem;
+  font-size: 1rem;
+  /* margin: 1rem 0; */
 }
 .extra_login_info__rememberMe {
   display: flex;
@@ -70,5 +71,5 @@
 
 .extra_login_info__signUp {
   padding: 3rem 0 0 0;
-  font-size: 0.85rem;
+  font-size: 1rem;
 }

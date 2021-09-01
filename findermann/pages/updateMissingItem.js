@@ -19,8 +19,6 @@ function updateMissingItem() {
                 type="text"
                 name="category"
                 fieldType="Select"
-                padding="1.2rem 2rem"
-                fontSize="1rem"
                 dropDown
               />
               <Field
@@ -28,8 +26,6 @@ function updateMissingItem() {
                 type="text"
                 name="subCategory"
                 fieldType="Select"
-                padding="1.2rem 2rem"
-                fontSize="1rem"
                 dropDown
               />
               <Field
@@ -37,33 +33,20 @@ function updateMissingItem() {
                 type="text"
                 name="nameOfItem"
                 fieldType="Input"
-                padding="1.2rem 2rem"
-                fontSize="1rem"
               />
               <Field
                 text="Address"
                 type="text"
                 name="address"
                 fieldType="Input"
-                padding="1.2rem 2rem"
-                fontSize="1rem"
               />
-              <Field
-                text="Email"
-                type="text"
-                name="email"
-                fieldType="Input"
-                padding="1.2rem 2rem"
-                fontSize="1rem"
-              />
+              <Field text="Email" type="text" name="email" fieldType="Input" />
 
               <Field
                 text="State"
                 type="text"
                 name="state"
                 fieldType="Select"
-                padding="1.2rem 2rem"
-                fontSize="1rem"
                 dropDown
               />
               <Field
@@ -71,16 +54,12 @@ function updateMissingItem() {
                 type="text"
                 name="phoneNumber"
                 fieldType="Input"
-                padding="1.2rem 2rem"
-                fontSize="1rem"
               />
               <Field
                 text="Local Government"
                 type="text"
                 name="localGovernment"
                 fieldType="Select"
-                padding="1.2rem 2rem"
-                fontSize="1rem"
                 dropDown
               />
               <Field
@@ -88,16 +67,12 @@ function updateMissingItem() {
                 type="text"
                 name="reward"
                 fieldType="Input"
-                padding="1.2rem 2rem"
-                fontSize="1rem"
               />
               <Field
                 text="Status"
                 type="text"
                 name="status"
                 fieldType="Select"
-                padding="1.2rem 2rem"
-                fontSize="1rem"
                 dropDown
               />
               <Field
@@ -105,16 +80,12 @@ function updateMissingItem() {
                 type="text"
                 name="policeStation"
                 fieldType="Input"
-                padding="1.2rem 2rem"
-                fontSize="1rem"
               />
               <Field
                 text="Contact Method"
                 type="text"
                 name="contactMethod"
                 fieldType="Select"
-                padding="1.2rem 2rem"
-                fontSize="1rem"
                 dropDown
               />
             </div>
@@ -125,31 +96,23 @@ function updateMissingItem() {
               cols="30"
               rows="10"
               fieldType="TextArea"
-              padding="1.2rem 2rem"
-              fontSize="1rem"
             />
           </form>
         </div>
-        <div>
+        <div className="upload_images_section">
           <h3 className="heading">Upload Images</h3>
           <br />
           <div className="upload_image_container">
-            <ImageUpload />
+            <ImageUpload height="15rem" width="15rem" />
 
-            <ImageUpload />
+            <ImageUpload height="15rem" width="15rem" />
 
-            <ImageUpload />
+            <ImageUpload height="15rem" width="15rem" />
 
-            <ImageUpload />
+            <ImageUpload height="15rem" width="15rem" />
           </div>
 
-          <Button
-            type="submit"
-            text="Post"
-            width="70%"
-            margin="2.5rem 0"
-            to="/editUpload"
-          />
+          <Button type="submit" text="Post" width="70%" to="/editUpload" />
         </div>
       </div>
     </>

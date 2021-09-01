@@ -20,8 +20,6 @@ function missingItemsForm() {
                   text="Category"
                   type="text"
                   name="category"
-                  padding="1.2rem 2rem"
-                  fontSize="1rem"
                   fieldType="Select"
                   dropDown
                 />
@@ -30,8 +28,6 @@ function missingItemsForm() {
                   text="Sub-Category"
                   type="text"
                   name="subCategory"
-                  padding="1.2rem 2rem"
-                  fontSize="1rem"
                   fieldType="Select"
                   dropDown
                 />
@@ -40,8 +36,6 @@ function missingItemsForm() {
                   text="Name of item"
                   type="text"
                   name="nameOfItem"
-                  padding="1.2rem 2rem"
-                  fontSize="1rem"
                   fieldType="Input"
                 />
 
@@ -49,8 +43,6 @@ function missingItemsForm() {
                   text="Address"
                   type="text"
                   name="address"
-                  padding="1.2rem 2rem"
-                  fontSize="1rem"
                   fieldType="Input"
                 />
 
@@ -58,8 +50,6 @@ function missingItemsForm() {
                   text="Email"
                   type="text"
                   name="email"
-                  padding="1.2rem 2rem"
-                  fontSize="1rem"
                   fieldType="Input"
                 />
 
@@ -67,8 +57,6 @@ function missingItemsForm() {
                   text="State"
                   type="text"
                   name="state"
-                  padding="1.2rem 2rem"
-                  fontSize="1rem"
                   fieldType="Select"
                   dropDown
                 />
@@ -77,8 +65,6 @@ function missingItemsForm() {
                   text="Phone Number"
                   type="text"
                   name="phoneNumber"
-                  padding="1.2rem 2rem"
-                  fontSize="1rem"
                   fieldType="Input"
                 />
 
@@ -86,8 +72,6 @@ function missingItemsForm() {
                   text="Local Government"
                   type="text"
                   name="localGovernment"
-                  padding="1.2rem 2rem"
-                  fontSize="1rem"
                   fieldType="Select"
                   dropDown
                 />
@@ -96,8 +80,6 @@ function missingItemsForm() {
                   text="Reward"
                   type="text"
                   name="reward"
-                  padding="1.2rem 2rem"
-                  fontSize="1rem"
                   fieldType="Input"
                 />
 
@@ -105,8 +87,6 @@ function missingItemsForm() {
                   text="Status"
                   type="text"
                   name="status"
-                  padding="1.2rem 2rem"
-                  fontSize="1rem"
                   fieldType="Select"
                   dropDown
                 />
@@ -115,8 +95,6 @@ function missingItemsForm() {
                   text="Contact Method"
                   type="text"
                   name="contactMethod"
-                  padding="1.2rem 2rem"
-                  fontSize="1rem"
                   fieldType="Select"
                   dropDown
                 />
@@ -127,8 +105,6 @@ function missingItemsForm() {
                 name="description"
                 cols="30"
                 rows="10"
-                padding="1.2rem 2rem"
-                fontSize="1rem"
                 fieldType="TextArea"
               />
             </form>
@@ -137,22 +113,16 @@ function missingItemsForm() {
             <h3 className="heading">Upload Images</h3>
             <br />
             <div className="upload_image_container">
-              <ImageUpload />
+              <ImageUpload height="15rem" width="15rem" />
 
-              <ImageUpload />
+              <ImageUpload height="15rem" width="15rem" />
 
-              <ImageUpload />
+              <ImageUpload height="15rem" width="15rem" />
 
-              <ImageUpload />
+              <ImageUpload height="15rem" width="15rem" />
             </div>
 
-            <Button
-              type="submit"
-              text="Post"
-              width="70%"
-              margin="2.5rem 0"
-              to="/subscription"
-            />
+            <Button type="submit" text="Post" width="70%" to="/subscription" />
           </div>
         </div>
       </>

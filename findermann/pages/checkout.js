@@ -43,7 +43,7 @@ function checkout() {
 
             <Field
               text="Phone Number"
-              type="number"
+              type="text"
               name="phoneNumber"
               fieldType="Input"
             />

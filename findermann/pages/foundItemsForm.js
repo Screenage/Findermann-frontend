@@ -44,7 +44,7 @@ const foundItemsForm = () => {
             />
 
             <Field
-              text="Address:"
+              text="Address"
               type="text"
               name="address"
               padding="1.2rem 2rem"
@@ -72,7 +72,7 @@ const foundItemsForm = () => {
             />
 
             <Field
-              text="Phone Number:"
+              text="Phone Number"
               type="text"
               name="phoneNumber"
               padding="1.2rem 2rem"
@@ -91,7 +91,7 @@ const foundItemsForm = () => {
             />
 
             <Field
-              text="Police Station Holding item:"
+              text="Police Station Holding item"
               type="text"
               name="policeStation"
               padding="1.2rem 2rem"

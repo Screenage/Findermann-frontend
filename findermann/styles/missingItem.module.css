@@ -49,6 +49,13 @@
 
 /* end of  extra details pane styling */
 
+.upload_images_section {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0 0 0;
+  width: 100%;
+}
+
 /*  detail_container */
 .detail_container {
   z-index: 1;
